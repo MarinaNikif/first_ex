@@ -1,5 +1,6 @@
 import data_download as dd
 import data_plotting as dplt
+import average as avg
 
 
 def main():
@@ -20,7 +21,9 @@ def main():
     dplt.create_and_save_plot(stock_data, ticker, period)
 
     # Calculate and display the average price
-    dplt.calculate_and_display_average_price(stock_data)
+    avg.calculate_and_display_average_price(stock_data)
+
+    avg.notify_if_strong_fluctuations(stock_data)
 
 
 if __name__ == "__main__":
