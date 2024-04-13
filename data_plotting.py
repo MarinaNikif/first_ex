@@ -29,8 +29,3 @@ def create_and_save_plot(data, ticker, period, filename=None):
 
     plt.savefig(filename)
     print(f"График сохранен как {filename}")
-
-
-def calculate_and_display_average_price(data):
-    average_price = data['Close'].mean()
-    print(f"Средняя цена закрытия акций за заданный период: {average_price}")
