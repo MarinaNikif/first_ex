@@ -10,6 +10,7 @@ def main():
 
     ticker = input("Введите тикер акции (например, «AAPL» для Apple Inc):»")
     period = input("Введите период для данных (например, '1mo' для одного месяца): ")
+    threshold = int(input("Введите процент колебания цены: "))
 
     # Fetch stock data
     stock_data = dd.fetch_stock_data(ticker, period)
@@ -23,8 +24,9 @@ def main():
     # Calculate and display the average price
     avg.calculate_and_display_average_price(stock_data)
 
-    avg.notify_if_strong_fluctuations(stock_data)
+    avg.notify_if_strong_fluctuations(stock_data, threshold)
 
 
 if __name__ == "__main__":
     main()
+
