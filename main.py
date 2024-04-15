@@ -24,7 +24,11 @@ def main():
     # Calculate and display the average price
     avg.calculate_and_display_average_price(stock_data)
 
+    # анализирует данные и уведомляет пользователя, если цена акций колебалась более чем на заданный процент за период.
     avg.notify_if_strong_fluctuations(stock_data, threshold)
+
+    # возможность экспортировать данные в CSV формате
+    avg.export_data_to_csv(stock_data, 'new_file.csv')
 
 
 if __name__ == "__main__":
